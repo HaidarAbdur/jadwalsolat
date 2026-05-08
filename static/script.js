@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // --- Clock and Date Logic ---
     const clockElement = document.getElementById('live-clock');
     const dateElement = document.getElementById('current-date');
@@ -26,18 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --- API Data Fetching ---
-    
+
     const fetchJadwal = async () => {
         try {
             // Call the local Flask API endpoint
             const response = await fetch('/api/jadwal');
-            
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            
+
             const data = await response.json();
-            
+
             if (data.status && data.data && data.data.jadwal) {
                 const jadwal = data.data.jadwal;
                 updateJadwalUI(jadwal);
@@ -90,9 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             }
         }
-        
+
         // If before subuh, could highlight Isya of previous day, but we'll leave it null or highlight nothing
-        
+
         // Remove active class from all
         document.querySelectorAll('.jadwal-card').forEach(card => {
             card.classList.remove('active');
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial Fetch
     fetchJadwal();
-    
+
     // Refresh schedule data every hour just in case
     setInterval(fetchJadwal, 60 * 60 * 1000);
 });
