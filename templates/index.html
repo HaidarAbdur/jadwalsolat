@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Solat Sukoharjo</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- Background Decoration -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <div class="container">
+        
+        <!-- Header Section -->
+        <header>
+            <div class="header-content">
+                <h1>JADWAL SOLAT SUKOHARJO</h1>
+                <p id="current-date" class="date-text">Memuat tanggal...</p>
+                <div class="clock" id="live-clock">00:00:00</div>
+            </div>
+        </header>
+
+        <!-- Video Center Section -->
+        <main class="video-section">
+            <div class="video-container">
+                <!-- Using a placeholder royalty free nature loop -->
+                <video autoplay loop muted playsinline id="bg-video">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+                <div class="video-overlay">
+                    <div class="overlay-text">Selamat Menunaikan Ibadah Sholat</div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Prayer Times Grid Section -->
+        <section class="jadwal-section">
+            <div class="grid-container" id="jadwal-grid">
+                
+                <!-- Subuh -->
+                <div class="jadwal-card" id="card-subuh">
+                    <div class="card-icon">🌅</div>
+                    <div class="card-title">Subuh</div>
+                    <div class="card-time" id="time-subuh">--:--</div>
+                </div>
+
+                <!-- Dzuhur -->
+                <div class="jadwal-card" id="card-dzuhur">
+                    <div class="card-icon">☀️</div>
+                    <div class="card-title">Dzuhur</div>
+                    <div class="card-time" id="time-dzuhur">--:--</div>
+                </div>
+
+                <!-- Ashar -->
+                <div class="jadwal-card" id="card-ashar">
+                    <div class="card-icon">🌤️</div>
+                    <div class="card-title">Ashar</div>
+                    <div class="card-time" id="time-ashar">--:--</div>
+                </div>
+
+                <!-- Maghrib -->
+                <div class="jadwal-card" id="card-maghrib">
+                    <div class="card-icon">🌇</div>
+                    <div class="card-title">Maghrib</div>
+                    <div class="card-time" id="time-maghrib">--:--</div>
+                </div>
+
+                <!-- Isya -->
+                <div class="jadwal-card" id="card-isya">
+                    <div class="card-icon">🌌</div>
+                    <div class="card-title">Isya</div>
+                    <div class="card-time" id="time-isya">--:--</div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Main Script -->
+    <script src="/static/script.js"></script>
+</body>
+</html>

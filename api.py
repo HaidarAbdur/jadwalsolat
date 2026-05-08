@@ -1,13 +1,18 @@
 # program jadwal sholat indonesia
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from datetime import datetime
 import requests
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static', static_folder='static', template_folder='templates')
 
 # ID Kota Sukoharjo
 ID_SUKOHARJO = "1425"
 BASE_URL = "https://api.myquran.com/v2/sholat"
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 
 @app.get('/api/kota/<nama_kota>')
