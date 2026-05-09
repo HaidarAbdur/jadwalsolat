@@ -1,4 +1,5 @@
 # program jadwal sholat indonesia
+# pyright: ignore[missing-import]
 from flask import Flask, jsonify, render_template
 from datetime import datetime
 import requests
